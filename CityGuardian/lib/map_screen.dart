@@ -11,9 +11,9 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   GoogleMapController? _mapController;
-  LatLng _currentPosition = const LatLng(27.552990, 76.634573); // Default location
-  Stream<Position>? _positionStream;
+  LatLng _currentPosition = const LatLng(27.552990, 76.634573);
   TextEditingController _searchController = TextEditingController();
+  Stream<Position>? _positionStream;
 
   @override
   void initState() {
@@ -96,7 +96,7 @@ class _MapScreenState extends State<MapScreen> {
               _mapController = controller;
             },
             myLocationEnabled: true,
-            myLocationButtonEnabled: false, // hide default button
+            myLocationButtonEnabled: false,
             mapType: MapType.normal,
           ),
 
@@ -125,7 +125,7 @@ class _MapScreenState extends State<MapScreen> {
             ),
           ),
 
-          // Custom square location button matching zoom button style
+          // Custom square location button
           Positioned(
             bottom: 100,
             right: 10,
